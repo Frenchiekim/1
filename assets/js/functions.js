@@ -14,45 +14,45 @@ $(document).ready(function () {
   }).addTo(map);
 });
 
-const slides = document.querySelectorAll('.slider');
-const nextBtn = document.querySelector('.nextBtn');
-const prevBtn = document.querySelector('.prevBtn');
+const slides = document.querySelectorAll(".slider");
+const nextBtn = document.querySelector(".nextBtn");
+const prevBtn = document.querySelector(".prevBtn");
 
-slides.forEach(function(slide, index) {
+slides.forEach(function (slide, index) {
   slide.style.left = `${index * 100}%`;
-})
+}); 
 
 let counter = 0;
 
-
-
-nextBtn.addEventListener('click', function () {
+nextBtn.addEventListener("click", function () {
   counter++;
   carousel();
-})
+});
 
-prevBtn.addEventListener('click', function () {
+prevBtn.addEventListener("click", function () {
   counter++;
   carousel();
 });
 
 function carousel() {
-	alert();
-  if (counter < slides.length -1) {
-    nextBtn.style.display = 'block';
+  alert();
+  if (counter < slides.length - 1) {
+    nextBtn.style.display = "block";
   } else {
-    nextBtn.style.display = 'none';
+    nextBtn.style.display = "none";
   }
 
   if (counter < 0) {
-    prevBtn.style.display = 'block';
+    prevBtn.style.display = "block";
   } else {
-    prevBtn.style.display = 'none';
+    prevBtn.style.display = "none";
   }
 
-  slides.forEach(function(slide) {
-	slide.style.transform = `translateX(-${counter * 100}%)`;
-  })
+  slides.forEach(function (slide) {
+    slide.style.transform = `translateX(-${counter * 100}%)`;
+  });
 }
 
-prevBtn.style.display = "none";
+prevBtn.style.display = "none"; 
+
+// Carousel pas reussi mais j'ai fait de mon mieux avec les jours que j'avais. :(
